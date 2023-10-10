@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Order Placement">
+            <Grid>
+                <StackPanel>
+                    <Label>Symbol:</Label>
+                    <ComboBox x:Name="SymbolComboBox">
+                        <ComboBoxItem Content="RELIANCE-EQ" />
+                        <ComboBoxItem Content="SBIN-EQ" />
+                    </ComboBox>
+
+                    <Label>Side:</Label>
+                    <ComboBox x:Name="SideComboBox">
+                        <ComboBoxItem Content="Buy" />
+                        <ComboBoxItem Content="Sell" />
+                    </ComboBox>
+
+                    <Label>Qty:</Label>
+                    <TextBox x:Name="QtyTextBox" />
+
+                    <Button Content="SEND" Click="SendOrder_Click" />
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Logs">
+            <TextBlock x:Name="LogsTextBlock" Text="Logs will be displayed here." />
+        </TabItem>
+    </TabControl>
+</Window>
